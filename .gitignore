@@ -1,0 +1,5 @@
+.idea
+*.o
+modsecurity
+modsecurity-v3.0.*
+owasp-modsecurity-crs

@@ -1,0 +1,14 @@
+[Unit]
+Description=HAProxy SPOA ModSecurity3
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/haproxy-spoa-modsecurity -d -p 12345 -f /etc/haproxy/haproxy-spoa-modsecurity.conf
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=%n
